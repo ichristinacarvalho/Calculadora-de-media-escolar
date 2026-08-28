@@ -1,0 +1,192 @@
+/*GERAIS*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
+
+    background: var(--cor-fundo);
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*CORES*/
+:root {
+    --cor-fundo: #f0f4f8;
+    --cor-card: #ffffff;
+    --cor-texto: #1e293b;
+    --cor-borda: #cbd5e1;
+    --cor-azul-principal: #2563eb;
+    --cor-azul-hover: #1d4ed8;
+    --cor-cinza-botao: #64748b;
+}
+
+/*CARD*/
+.card {
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+
+    background: var(--cor-card);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+/*TITULO*/
+h1 {
+    color: var(--cor-azul-principal);
+
+    font-size: 40px;
+    letter-spacing: 3px;
+}
+
+/*SUBTITULO*/
+header>p {
+    color: var(--cor-texto);
+
+    letter-spacing: 4px;
+}
+
+/*FORM*/
+label {
+    color: var(--cor-texto);
+}
+
+input {
+    border: 2px solid var(--cor-azul-hover);
+    border-radius: 12px;
+
+    padding: 5px;
+    margin-bottom: 20px;
+
+    outline: none;
+
+    transition: all 0.2s ease-in-out;
+}
+
+input:focus{
+    border-color: var(--cor-azul-principal);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+::placeholder {
+    color: var(--cor-cinza-botao);
+}
+
+/*BUTTON - REGRA GERAL*/
+button{
+    max-width: 200px;
+    padding: 14px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease-in-out;
+}
+
+/*BOTÃO - CALCULAR*/
+#calcular{
+
+    color: #ffffff;
+    background: var(--cor-azul-principal);
+border: none;
+
+margin-bottom: 10px;
+}
+
+#calcular:hover{
+    background: var(--cor-azul-hover);
+    transform: translateY(-2px);
+}
+
+#calcular:active{
+    transform: translateY(0);
+}
+
+/*BOTÃO - LIMPAR CAMPOS*/
+#limpar{
+
+color: var(--cor-cinza-botao);
+    background: transparent;
+    border: 2px solid var(--cor-cinza-botao);
+}
+
+#limpar:hover{
+    background: rgba(100, 116, 139, 0.1);
+    color: var(--cor-texto);
+    border-color: var(--cor-texto);
+}
+
+#limpar:active{
+    transform: scale(0.98);
+}
+
+/*RESULTADO*/
+#resultadoCampo{
+    margin-top: 15px;
+    padding-top: 20px;
+
+    border-top: 2px dashed var(--cor-borda);
+    
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+h2{
+    font-size: 20px;
+
+    color: var(--cor-texto);
+
+    margin-bottom: 5px;
+}
+
+#media {
+    font-size: 16px;
+    color: var(--cor-texto);
+    font-weight: 600;
+}
+
+#resultado {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--cor-azul-principal); 
+}
+
+/*MEDIA QUERIES*/
+@media(max-width:600){
+    .card {
+        padding: 20px;
+        margin: 15px;
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 28px; 
+    }
+
+    button {
+        max-width: 100%; 
+        width: 100%;
+    }
+}
